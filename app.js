@@ -5,4 +5,6 @@ console.clear();
 // vars
 let base = 5;
 // call create table
-createTable(base);
+createTable(base)
+  .then((filename) => console.log(filename, "created"))
+  .catch((error) => console.log(error));
