@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 // multiplier fn
-async function createTable(base = 5) {
+async function createTable(base = 5, list) {
   try {
     console.log("--------------------");
     console.log("Calculator");
@@ -14,6 +14,9 @@ async function createTable(base = 5) {
     }
     // create and write file
     fs.writeFileSync(`result-base-${base}.txt`, output);
+
+    // show result of calculate
+    list ? console.log(output) : null;
 
     return `result-base-${base}.txt`;
   } catch (error) {
