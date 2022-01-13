@@ -1,11 +1,12 @@
 const fs = require("fs");
+const colors = require('colors');
 
 // multiplier fn
 async function createTable(base = 5, list) {
   try {
-    console.log("--------------------");
-    console.log("Calculator");
-    console.log("--------------------");
+    console.log("--------------------".green);
+    console.log("Calculator".green);
+    console.log("--------------------".green);
 
     let output = "";
     // calculate multipliers
